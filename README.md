@@ -46,11 +46,8 @@ All DAX formulas used in Power BI (for KPIs like Total Revenue, Avg Price, and R
 ###  Dashboard Snapshots
 | Dashboard View | Description |
 |----------------|-------------|
-| ![Dashboard Overview](FMCG_Dashboard_Main.png) | Main dashboard showing KPIs and filters |
-| ![By Channel](Channel_Wise_Units.png) | Sales performance by channel |
-| ![By Region](Region_Wise_Revenue.png) | Revenue comparison by region |
-| ![By Year](Year_Wise_Sales_Trend.png) | Yearly sales trend (2022–2024) |
-| ![Promotion Impact](Promotion_Impact.png) | Sales comparison between promoted and non-promoted periods |
+| ![Dashboard Overview](FMCG_Sales_Aalysis/FMCG Dashboard_Main .png.png) | Main dashboard showing KPIs and filters |
+> *Note:* The interactive Power BI dashboard for this project is included in the attached .pbix file.
 
 ---
 
