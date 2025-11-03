@@ -1,0 +1,2 @@
+1.Total Transactions = COUNTROWS('fmcg_sales_db fmcg_sales_final')
+2

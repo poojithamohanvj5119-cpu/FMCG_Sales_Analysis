@@ -1,0 +1,94 @@
+create database fmcg_sales_db; use fmcg_sales_db;
+
+ select count(*) From fmcg_sales_final;
+ select * from fmcg_sales_final limit 5;
+ 
+ # Brand-wise sales(Top Performing Brands)
+ select
+ brand,
+ sum(Units_sold) AS Total_units_Sold
+ From fmcg_sales_final
+ group by brand
+ order by Total_Units_Sold desc;
+ 
+ #Channel_wise sales
+ Select
+ channel,sum(units_sold) as  Total_units_sold
+ from fmcg_sales_final
+ group by channel
+ order by total_units_sold desc;
+ 
+ #Region-wise Sales
+ select region, sum(units_sold) as total_units_sold
+ from fmcg_sales_final group by region order by  Total_units_Sold desc;
+ 
+ #promotion impact analysis
+select
+promotion_flag,
+sum(units_sold) AS
+Total_units_sold,
+round(avg(price_unit), 2) AS
+Avg_price
+from fmcg_sales_final
+GROUP BY promotion_flag;
+
+#Monthly sales trend
+select 
+month,
+sum(units_sold) as total_units_sold
+from fmcg_sales_final
+group by month
+order by Month;
+
+#Yearly performance comparison
+SELECT
+YEAR,
+SUM(UNITS_SOLD) AS TOTAL_UNITS_SOLD,
+ROUND(SUM(PRICE_UNIT * UNITS_SOLD), 2) AS Total_Revenue
+from fmcg_sales_final
+group by year
+order by year;
+
+#Region and promotion combined
+select
+YEAR,REGION,PROMOTION_FLAG, COUNT(*) AS TRANSACTION,SUM(UNITS_SOLD) AS TOTAL_UNITS_SOLD,
+ROUND(SUM(PRICE_UNIT * UNITS_SOLD), 2) AS TOTAL_REVENUE,
+ROUND(AVG(PRICE_UNIT), 2) AVG_PRICE
+FROM fmcg_sales_final
+GROUP BY YEAR,REGION,PROMOTION_FLAG
+ORDER BY YEAR,REGION, SUM(price_unit * units_sold) DESC;
+
+#Stock and supply analysis
+select
+brand,
+sum(stock_available) as total_stock,
+sum(units_sold) as total_sales,
+(sum(stock_available) - sum(units_sold)) as remaining_stock 
+from fmcg_sales_final
+group by brand
+order by remaining_stock asc;
+
+#Total Revenue by Brand
+select
+brand,
+round(sum(price_unit * units_sold), 2) as total_revenue
+from fmcg_sales_final
+group by brand
+order by total_revenue desc;
+
+#Top 5 SKUs (most sold product)
+select
+sku,
+sum(units_sold) as  total_units_sold
+from fmcg_sales_final
+group by sku
+order by total_units_sold desc limit 5;
+
+#Avg delivery days by region
+select
+region,
+round(avg(delivery_days), 2) as
+avg_delivery_time
+from fmcg_sales_final
+group by region
+order by avg_delivery_time asc;
