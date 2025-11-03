@@ -46,7 +46,7 @@ All DAX formulas used in Power BI (for KPIs like Total Revenue, Avg Price, and R
 ###  Dashboard Snapshots
 | Dashboard View | Description |
 |----------------|-------------|
-| ![Dashboard Overview](FMCG_Sales_Aalysis/FMCG Dashboard_Main .png.png) | Main dashboard showing KPIs and filters |
+| ![Dashboard Overview](FMCG_Sales_Aalysis/FMCG ) | Main dashboard showing KPIs and filters |
 > *Note:* The interactive Power BI dashboard for this project is included in the attached .pbix file.
 
 ---
