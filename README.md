@@ -37,9 +37,8 @@ The dataset used is **“FMCG Daily Sales Data (2022–2024)”** from Kaggle, a
 - **DAX (Data Analysis Expressions):** Created formulas for revenue and other KPIs.  
 - **Excel:** Used for quick reviews and pivot analysis.
 
----### ⚙️ DAX Measures Used
-All DAX formulas used in Power BI (for KPIs like Total Revenue, Avg Price, and Revenue per Transaction) are documented in the file:  
-[`FMCG_DAX_Measures.txt`](./FMCG_DAX_Measures.txt)
+---###  DAX Measures Used
+All DAX formulas used in Power BI (for KPIs like Total Revenue, Avg Price, and Revenue per Transaction) are documented in the file attached.
 
 ---
 
