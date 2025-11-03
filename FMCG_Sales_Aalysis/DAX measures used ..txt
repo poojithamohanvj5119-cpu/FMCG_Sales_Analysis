@@ -1,2 +1,8 @@
 1.Total Transactions = COUNTROWS('fmcg_sales_db fmcg_sales_final')
-2
+2.Total units sold = sum('fmcg_sales_db fmcg_sales_final'[units_sold]) 
+
+3.Total revenue = SUMX('fmcg_sales_db fmcg_sales_final','fmcg_sales_db fmcg_sales_final'[price_unit] * 'fmcg_sales_db fmcg_sales_final'[units_sold])
+
+4.Avg price per unit = AVERAGE('fmcg_sales_db fmcg_sales_final'[price_unit])
+
+5.Revenue per transaction = DIVIDE([Total revenue], [Total Transactions])
